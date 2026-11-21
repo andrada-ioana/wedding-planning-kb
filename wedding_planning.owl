@@ -1,1443 +1,1441 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/andra/ontologies/2026/10/untitled-ontology-6/"
-     xml:base="http://www.semanticweb.org/andra/ontologies/2026/10/untitled-ontology-6/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:wedding-planning="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning"/>
-    
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning"
+         xmlns="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#">
 
+<owl:Ontology rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning"/>
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+<owl:ObjectProperty rdf:about="#assignedService"/>
 
-    
+<owl:ObjectProperty rdf:about="#containsDish"/>
 
+<owl:ObjectProperty rdf:about="#hasBackupSpace"/>
 
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#assignedService -->
+<owl:ObjectProperty rdf:about="#hasCapacityCategory">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#assignedService"/>
-    
+<owl:ObjectProperty rdf:about="#hasCouple">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#hasDietaryRequirement"/>
 
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#containsDish -->
+<owl:ObjectProperty rdf:about="#hasFacility"/>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#containsDish"/>
-    
+<owl:ObjectProperty rdf:about="#hasGuest">
+  <owl:inverseOf rdf:resource="#isGuestOf"/>
+</owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#isGuestOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasBackupSpace -->
+<owl:ObjectProperty rdf:about="#hasHardRequirement"/>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasBackupSpace"/>
-    
+<owl:ObjectProperty rdf:about="#hasIngredient"/>
 
+<owl:ObjectProperty rdf:about="#hasPolicy"/>
 
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCapacityCategory -->
+<owl:ObjectProperty rdf:about="#hasSizeCategory">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCapacityCategory">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#hasSpace"/>
 
+<owl:ObjectProperty rdf:about="#hasSubEvent"/>
 
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCouple -->
+<owl:ObjectProperty rdf:about="#hasWedding">
+  <owl:inverseOf rdf:resource="#isWeddingOf"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCouple">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#isWeddingOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#heldIn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasDietaryRequirement -->
+<owl:ObjectProperty rdf:about="#offersMenu"/>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasDietaryRequirement"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasFacility -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasFacility"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasGuest -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasGuest">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#isGuestOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasHardRequirement -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasHardRequirement"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasIngredient -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasIngredient"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasPolicy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasPolicy"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSizeCategory -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSizeCategory">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSpace -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSpace"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSubEvent -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSubEvent"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#isWeddingOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#heldIn -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#heldIn">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#isGuestOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#isGuestOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#isWeddingOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#isWeddingOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#offersMenu -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#offersMenu"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#playsGenre -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#playsGenre">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#playsGenre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#subGenreOf"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#prefersGenre -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#prefersGenre"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#providesEquipment -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#providesEquipment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedCaterer -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedCaterer">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#assignedService"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedMenu -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedMenu">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#subGenreOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#subGenreOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AccessibilityConflictPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AccessibilityConflictPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCouple"/>
-                                <owl:someValuesFrom>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasHardRequirement"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WheelchairRequirement"/>
-                                    </owl:Restriction>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasFacility"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WheelchairAccess"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholAllowedPolicy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholAllowedPolicy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholPolicy"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NoAlcoholPolicy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholConflictPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholConflictPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCouple"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasHardRequirement"/>
-                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholFreeRequirement"/>
-                                                    </owl:Restriction>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasPolicy"/>
-                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholAllowedPolicy"/>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCouple"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasHardRequirement"/>
-                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholRequiredRequirement"/>
-                                                    </owl:Restriction>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasPolicy"/>
-                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NoAlcoholPolicy"/>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholFreeRequirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholFreeRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#HardRequirement"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholRequiredRequirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholPolicy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholPolicy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VenuePolicy"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicPolicy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholRequiredRequirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholRequiredRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#HardRequirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CapacityConflictPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CapacityConflictPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeWedding"/>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCapacityCategory"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Class>
-                                                        <owl:unionOf rdf:parseType="Collection">
-                                                            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumSize"/>
-                                                            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallSize"/>
-                                                        </owl:unionOf>
-                                                    </owl:Class>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumWedding"/>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasCapacityCategory"/>
-                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallSize"/>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CateringService -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CateringService">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Service"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ceremony -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ceremony">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingSubEvent"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Reception"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CeremonySpace -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CeremonySpace">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Space"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CompleteWeddingPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CompleteWeddingPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasFacility"/>
-                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ParkingFacility"/>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#assignedService"/>
-                                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                                        <owl:onClass rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SecurityStaff"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeWedding"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#assignedService"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Officiant"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#assignedService"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Photographer"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedCaterer"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CateringService"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Venue"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AccessibilityConflictPlan"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholConflictPlan"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CapacityConflictPlan"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DietaryConflictPlan"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#KitchenConflictPlan"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicConflictPlan"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Couple -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Couple"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DJ -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DJ">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EntertainmentProvider"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LiveBand"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DeliveryCatering -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DeliveryCatering">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CateringService"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OnSiteCookingCatering"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DietaryConflictPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DietaryConflictPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasGuest"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasDietaryRequirement"/>
-                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenFreeRequirement"/>
-                                                    </owl:Restriction>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedMenu"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#containsDish"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasIngredient"/>
-                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenIngredient"/>
-                                                    </owl:Restriction>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasGuest"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasDietaryRequirement"/>
-                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutFreeRequirement"/>
-                                                    </owl:Restriction>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedMenu"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#containsDish"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasIngredient"/>
-                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutIngredient"/>
-                                                    </owl:Restriction>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasGuest"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasDietaryRequirement"/>
-                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VegetarianRequirement"/>
-                                                    </owl:Restriction>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedMenu"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#containsDish"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasIngredient"/>
-                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MeatIngredient"/>
-                                                    </owl:Restriction>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DietaryRequirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DietaryRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Requirement"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#HardRequirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Dish -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Dish"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EntertainmentProvider -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EntertainmentProvider">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Service"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EveningReception -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EveningReception">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Reception"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Facility -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Facility"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenFreeMenu -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenFreeMenu">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#containsDish"/>
-                        <owl:allValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasIngredient"/>
-                                <owl:allValuesFrom>
-                                    <owl:Class>
-                                        <owl:complementOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenIngredient"/>
-                                    </owl:Class>
-                                </owl:allValuesFrom>
-                            </owl:Restriction>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenFreeRequirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenFreeRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DietaryRequirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenIngredient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenIngredient">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ingredient"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SafeIngredient"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Guest -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Guest"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#HardRequirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#HardRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Requirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#IndoorSpace -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#IndoorSpace">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Space"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OutdoorSpace"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ingredient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ingredient"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#KitchenConflictPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#KitchenConflictPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedCaterer"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OnSiteCookingCatering"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasFacility"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OnSiteKitchen"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeSize -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeSize">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SizeCategory"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeWedding -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeWedding">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSizeCategory"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeSize"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LateNightMusicAllowedPolicy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LateNightMusicAllowedPolicy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicPolicy"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NoLateNightMusicPolicy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LiveBand -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LiveBand">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EntertainmentProvider"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MeatIngredient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MeatIngredient">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ingredient"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SafeIngredient"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumSize -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumSize">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SizeCategory"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumWedding -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumWedding">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSizeCategory"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumSize"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicConflictPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicConflictPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#assignedService"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DJ"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LiveBand"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasWedding"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSubEvent"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EveningReception"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#selectedVenue"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasPolicy"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NoLateNightMusicPolicy"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicGenre -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicGenre">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#classical"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#indieRock"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#jazz"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#rock"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicPolicy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicPolicy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VenuePolicy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NoAlcoholPolicy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NoAlcoholPolicy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholPolicy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NoLateNightMusicPolicy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NoLateNightMusicPolicy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicPolicy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutFreeMenu -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutFreeMenu">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#containsDish"/>
-                        <owl:allValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasIngredient"/>
-                                <owl:allValuesFrom>
-                                    <owl:Class>
-                                        <owl:complementOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutIngredient"/>
-                                    </owl:Class>
-                                </owl:allValuesFrom>
-                            </owl:Restriction>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutFreeRequirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutFreeRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DietaryRequirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutIngredient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutIngredient">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ingredient"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SafeIngredient"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Officiant -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Officiant">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Service"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OnSiteCookingCatering -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OnSiteCookingCatering">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CateringService"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OnSiteKitchen -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OnSiteKitchen">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Facility"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OutdoorCeremony -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OutdoorCeremony">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ceremony"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#heldIn"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OutdoorSpace"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingSubEvent"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OutdoorSpace -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OutdoorSpace">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Space"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ParkingFacility -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ParkingFacility">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Facility"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Photographer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Photographer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Service"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Reception -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Reception">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingSubEvent"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ReceptionHall -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ReceptionHall">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#IndoorSpace"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Requirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Requirement"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SafeIngredient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SafeIngredient">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ingredient"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SecurityStaff -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SecurityStaff">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Service"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SelfEquippedProvider -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SelfEquippedProvider">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EntertainmentProvider"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#providesEquipment"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SoundEquipment"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EntertainmentProvider"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Service -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Service"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SizeCategory -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SizeCategory">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeSize"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumSize"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallSize"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallSize -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallSize">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SizeCategory"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallWedding -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallWedding">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasSizeCategory"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallSize"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SoundEquipment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SoundEquipment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Space -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Space"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VegetarianMenu -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VegetarianMenu">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#containsDish"/>
-                        <owl:allValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#hasIngredient"/>
-                                <owl:allValuesFrom>
-                                    <owl:Class>
-                                        <owl:complementOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MeatIngredient"/>
-                                    </owl:Class>
-                                </owl:allValuesFrom>
-                            </owl:Restriction>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VegetarianRequirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VegetarianRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#DietaryRequirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Venue -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Venue"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VenuePolicy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VenuePolicy"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VerifiedWeddingPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VerifiedWeddingPlan">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CompleteWeddingPlan"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ConflictingWeddingPlan"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingSubEvent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingSubEvent"/>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WheelchairAccess -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WheelchairAccess">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Facility"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WheelchairRequirement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WheelchairRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#HardRequirement"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#classical -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#classical">
-        <rdf:type rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicGenre"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#indieRock -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#indieRock">
-        <rdf:type rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicGenre"/>
-        <wedding-planning:subGenreOf rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#rock"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#jazz -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#jazz">
-        <rdf:type rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicGenre"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#rock -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#rock">
-        <rdf:type rdf:resource="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicGenre"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
+<owl:ObjectProperty rdf:about="#playsGenre">
+  <owl:propertyChainAxiom>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholFreeRequirement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#AlcoholRequiredRequirement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WheelchairRequirement"/>
-        </owl:members>
+      <rdf:first rdf:resource="#playsGenre"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#subGenreOf"/>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
     </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#CateringService"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#EntertainmentProvider"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Officiant"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Photographer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SecurityStaff"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Couple"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Dish"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Facility"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Guest"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Ingredient"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Menu"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MusicGenre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Requirement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Service"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SizeCategory"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SoundEquipment"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Space"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Venue"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VenuePolicy"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#Wedding"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingPlan"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WeddingSubEvent"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#GlutenFreeRequirement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#NutFreeRequirement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#VegetarianRequirement"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#LargeSize"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#MediumSize"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#SmallSize"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#OnSiteKitchen"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#ParkingFacility"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/vu/ontologies/2026/wedding-planning#WheelchairAccess"/>
-        </owl:members>
-    </rdf:Description>
+  </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#subGenreOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#prefersGenre"/>
+
+<owl:ObjectProperty rdf:about="#providesEquipment"/>
+
+<owl:ObjectProperty rdf:about="#selectedCaterer">
+  <rdfs:subPropertyOf rdf:resource="#assignedService"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#selectedMenu">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#selectedVenue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#AccessibilityConflictPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#WeddingPlan"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasWedding"/>
+          <owl:someValuesFrom>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#hasCouple"/>
+              <owl:someValuesFrom>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasHardRequirement"/>
+                  <owl:someValuesFrom rdf:resource="#WheelchairRequirement"/>
+                </owl:Restriction>
+              </owl:someValuesFrom>
+            </owl:Restriction>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#selectedVenue"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:complementOf>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasFacility"/>
+                  <owl:someValuesFrom rdf:resource="#WheelchairAccess"/>
+                </owl:Restriction>
+              </owl:complementOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ConflictingWeddingPlan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WheelchairRequirement">
+  <rdfs:subClassOf rdf:resource="#HardRequirement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WheelchairAccess">
+  <rdfs:subClassOf rdf:resource="#Facility"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WeddingPlan"/>
+
+<owl:Class rdf:about="#ConflictingWeddingPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AccessibilityConflictPlan"/>
+        <rdf:Description rdf:about="#AlcoholConflictPlan"/>
+        <rdf:Description rdf:about="#CapacityConflictPlan"/>
+        <rdf:Description rdf:about="#DietaryConflictPlan"/>
+        <rdf:Description rdf:about="#KitchenConflictPlan"/>
+        <rdf:Description rdf:about="#MusicConflictPlan"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#WeddingPlan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AlcoholAllowedPolicy">
+  <rdfs:subClassOf rdf:resource="#AlcoholPolicy"/>
+  <owl:disjointWith rdf:resource="#NoAlcoholPolicy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AlcoholPolicy">
+  <rdfs:subClassOf rdf:resource="#VenuePolicy"/>
+  <owl:disjointWith rdf:resource="#MusicPolicy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NoAlcoholPolicy">
+  <rdfs:subClassOf rdf:resource="#AlcoholPolicy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AlcoholConflictPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#WeddingPlan"/>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasWedding"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasCouple"/>
+                      <owl:someValuesFrom>
+                        <owl:Restriction>
+                          <owl:onProperty rdf:resource="#hasHardRequirement"/>
+                          <owl:someValuesFrom rdf:resource="#AlcoholFreeRequirement"/>
+                        </owl:Restriction>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#selectedVenue"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasPolicy"/>
+                      <owl:someValuesFrom rdf:resource="#AlcoholAllowedPolicy"/>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasWedding"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasCouple"/>
+                      <owl:someValuesFrom>
+                        <owl:Restriction>
+                          <owl:onProperty rdf:resource="#hasHardRequirement"/>
+                          <owl:someValuesFrom rdf:resource="#AlcoholRequiredRequirement"/>
+                        </owl:Restriction>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#selectedVenue"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasPolicy"/>
+                      <owl:someValuesFrom rdf:resource="#NoAlcoholPolicy"/>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+          </owl:unionOf>
+        </owl:Class>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ConflictingWeddingPlan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AlcoholFreeRequirement">
+  <rdfs:subClassOf rdf:resource="#HardRequirement"/>
+  <owl:disjointWith rdf:resource="#AlcoholRequiredRequirement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AlcoholRequiredRequirement">
+  <rdfs:subClassOf rdf:resource="#HardRequirement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HardRequirement">
+  <rdfs:subClassOf rdf:resource="#Requirement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VenuePolicy"/>
+
+<owl:Class rdf:about="#MusicPolicy">
+  <rdfs:subClassOf rdf:resource="#VenuePolicy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CapacityConflictPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#WeddingPlan"/>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasWedding"/>
+                  <owl:someValuesFrom rdf:resource="#LargeWedding"/>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#selectedVenue"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasCapacityCategory"/>
+                      <owl:someValuesFrom>
+                        <owl:Class>
+                          <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#MediumSize"/>
+                            <rdf:Description rdf:about="#SmallSize"/>
+                          </owl:unionOf>
+                        </owl:Class>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasWedding"/>
+                  <owl:someValuesFrom rdf:resource="#MediumWedding"/>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#selectedVenue"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasCapacityCategory"/>
+                      <owl:someValuesFrom rdf:resource="#SmallSize"/>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+          </owl:unionOf>
+        </owl:Class>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ConflictingWeddingPlan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LargeWedding">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Wedding"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasSizeCategory"/>
+          <owl:someValuesFrom rdf:resource="#LargeSize"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Wedding"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MediumSize">
+  <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SmallSize">
+  <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MediumWedding">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Wedding"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasSizeCategory"/>
+          <owl:someValuesFrom rdf:resource="#MediumSize"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Wedding"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CateringService">
+  <rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Service"/>
+
+<owl:Class rdf:about="#Ceremony">
+  <rdfs:subClassOf rdf:resource="#WeddingSubEvent"/>
+  <owl:disjointWith rdf:resource="#Reception"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WeddingSubEvent"/>
+
+<owl:Class rdf:about="#Reception">
+  <rdfs:subClassOf rdf:resource="#WeddingSubEvent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CeremonySpace">
+  <rdfs:subClassOf rdf:resource="#Space"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Space"/>
+
+<owl:Class rdf:about="#CompleteWeddingPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#WeddingPlan"/>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#selectedVenue"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasFacility"/>
+                      <owl:someValuesFrom rdf:resource="#ParkingFacility"/>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#assignedService"/>
+                  <owl:onClass rdf:resource="#SecurityStaff"/>
+                  <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+            <owl:Class>
+              <owl:complementOf>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasWedding"/>
+                  <owl:someValuesFrom rdf:resource="#LargeWedding"/>
+                </owl:Restriction>
+              </owl:complementOf>
+            </owl:Class>
+          </owl:unionOf>
+        </owl:Class>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#assignedService"/>
+          <owl:someValuesFrom rdf:resource="#Officiant"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#assignedService"/>
+          <owl:someValuesFrom rdf:resource="#Photographer"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#selectedCaterer"/>
+          <owl:someValuesFrom rdf:resource="#CateringService"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#selectedVenue"/>
+          <owl:someValuesFrom rdf:resource="#Venue"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#WeddingPlan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ParkingFacility">
+  <rdfs:subClassOf rdf:resource="#Facility"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SecurityStaff">
+  <rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Officiant">
+  <rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Photographer">
+  <rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Venue"/>
+
+<owl:Class rdf:about="#DietaryConflictPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#WeddingPlan"/>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasWedding"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasGuest"/>
+                      <owl:someValuesFrom>
+                        <owl:Restriction>
+                          <owl:onProperty rdf:resource="#hasDietaryRequirement"/>
+                          <owl:someValuesFrom rdf:resource="#GlutenFreeRequirement"/>
+                        </owl:Restriction>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#selectedMenu"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#containsDish"/>
+                      <owl:someValuesFrom>
+                        <owl:Restriction>
+                          <owl:onProperty rdf:resource="#hasIngredient"/>
+                          <owl:someValuesFrom rdf:resource="#GlutenIngredient"/>
+                        </owl:Restriction>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasWedding"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasGuest"/>
+                      <owl:someValuesFrom>
+                        <owl:Restriction>
+                          <owl:onProperty rdf:resource="#hasDietaryRequirement"/>
+                          <owl:someValuesFrom rdf:resource="#NutFreeRequirement"/>
+                        </owl:Restriction>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#selectedMenu"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#containsDish"/>
+                      <owl:someValuesFrom>
+                        <owl:Restriction>
+                          <owl:onProperty rdf:resource="#hasIngredient"/>
+                          <owl:someValuesFrom rdf:resource="#NutIngredient"/>
+                        </owl:Restriction>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasWedding"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#hasGuest"/>
+                      <owl:someValuesFrom>
+                        <owl:Restriction>
+                          <owl:onProperty rdf:resource="#hasDietaryRequirement"/>
+                          <owl:someValuesFrom rdf:resource="#VegetarianRequirement"/>
+                        </owl:Restriction>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#selectedMenu"/>
+                  <owl:someValuesFrom>
+                    <owl:Restriction>
+                      <owl:onProperty rdf:resource="#containsDish"/>
+                      <owl:someValuesFrom>
+                        <owl:Restriction>
+                          <owl:onProperty rdf:resource="#hasIngredient"/>
+                          <owl:someValuesFrom rdf:resource="#MeatIngredient"/>
+                        </owl:Restriction>
+                      </owl:someValuesFrom>
+                    </owl:Restriction>
+                  </owl:someValuesFrom>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+          </owl:unionOf>
+        </owl:Class>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ConflictingWeddingPlan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#KitchenConflictPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#WeddingPlan"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#selectedCaterer"/>
+          <owl:someValuesFrom rdf:resource="#OnSiteCookingCatering"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#selectedVenue"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:complementOf>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#hasFacility"/>
+                  <owl:someValuesFrom rdf:resource="#OnSiteKitchen"/>
+                </owl:Restriction>
+              </owl:complementOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ConflictingWeddingPlan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MusicConflictPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#WeddingPlan"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#assignedService"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#DJ"/>
+                <rdf:Description rdf:about="#LiveBand"/>
+              </owl:unionOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasWedding"/>
+          <owl:someValuesFrom>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#hasSubEvent"/>
+              <owl:someValuesFrom rdf:resource="#EveningReception"/>
+            </owl:Restriction>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#selectedVenue"/>
+          <owl:someValuesFrom>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#hasPolicy"/>
+              <owl:someValuesFrom rdf:resource="#NoLateNightMusicPolicy"/>
+            </owl:Restriction>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ConflictingWeddingPlan"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Couple"/>
+
+<owl:Class rdf:about="#DJ">
+  <rdfs:subClassOf rdf:resource="#EntertainmentProvider"/>
+  <owl:disjointWith rdf:resource="#LiveBand"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EntertainmentProvider">
+  <rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LiveBand">
+  <rdfs:subClassOf rdf:resource="#EntertainmentProvider"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DeliveryCatering">
+  <rdfs:subClassOf rdf:resource="#CateringService"/>
+  <owl:disjointWith rdf:resource="#OnSiteCookingCatering"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnSiteCookingCatering">
+  <rdfs:subClassOf rdf:resource="#CateringService"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GlutenFreeRequirement">
+  <rdfs:subClassOf rdf:resource="#DietaryRequirement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GlutenIngredient">
+  <rdfs:subClassOf rdf:resource="#Ingredient"/>
+  <owl:disjointWith rdf:resource="#SafeIngredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NutFreeRequirement">
+  <rdfs:subClassOf rdf:resource="#DietaryRequirement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NutIngredient">
+  <rdfs:subClassOf rdf:resource="#Ingredient"/>
+  <owl:disjointWith rdf:resource="#SafeIngredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VegetarianRequirement">
+  <rdfs:subClassOf rdf:resource="#DietaryRequirement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatIngredient">
+  <rdfs:subClassOf rdf:resource="#Ingredient"/>
+  <owl:disjointWith rdf:resource="#SafeIngredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DietaryRequirement">
+  <rdfs:subClassOf rdf:resource="#Requirement"/>
+  <owl:disjointWith rdf:resource="#HardRequirement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Requirement"/>
+
+<owl:Class rdf:about="#Dish"/>
+
+<owl:Class rdf:about="#EveningReception">
+  <rdfs:subClassOf rdf:resource="#Reception"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Facility"/>
+
+<owl:Class rdf:about="#GlutenFreeMenu">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Menu"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#containsDish"/>
+          <owl:allValuesFrom>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#hasIngredient"/>
+              <owl:allValuesFrom>
+                <owl:Class>
+                  <owl:complementOf rdf:resource="#GlutenIngredient"/>
+                </owl:Class>
+              </owl:allValuesFrom>
+            </owl:Restriction>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Menu"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Menu"/>
+
+<owl:Class rdf:about="#Ingredient"/>
+
+<owl:Class rdf:about="#SafeIngredient">
+  <rdfs:subClassOf rdf:resource="#Ingredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Guest"/>
+
+<owl:Class rdf:about="#IndoorSpace">
+  <rdfs:subClassOf rdf:resource="#Space"/>
+  <owl:disjointWith rdf:resource="#OutdoorSpace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OutdoorSpace">
+  <rdfs:subClassOf rdf:resource="#Space"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnSiteKitchen">
+  <rdfs:subClassOf rdf:resource="#Facility"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LargeSize">
+  <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SizeCategory">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#LargeSize"/>
+        <rdf:Description rdf:about="#MediumSize"/>
+        <rdf:Description rdf:about="#SmallSize"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Wedding"/>
+
+<owl:Class rdf:about="#LateNightMusicAllowedPolicy">
+  <rdfs:subClassOf rdf:resource="#MusicPolicy"/>
+  <owl:disjointWith rdf:resource="#NoLateNightMusicPolicy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NoLateNightMusicPolicy">
+  <rdfs:subClassOf rdf:resource="#MusicPolicy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MusicGenre">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:oneOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#classical"/>
+        <rdf:Description rdf:about="#indieRock"/>
+        <rdf:Description rdf:about="#jazz"/>
+        <rdf:Description rdf:about="#rock"/>
+      </owl:oneOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#NutFreeMenu">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Menu"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#containsDish"/>
+          <owl:allValuesFrom>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#hasIngredient"/>
+              <owl:allValuesFrom>
+                <owl:Class>
+                  <owl:complementOf rdf:resource="#NutIngredient"/>
+                </owl:Class>
+              </owl:allValuesFrom>
+            </owl:Restriction>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Menu"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OutdoorCeremony">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Ceremony"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#heldIn"/>
+          <owl:someValuesFrom rdf:resource="#OutdoorSpace"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#WeddingSubEvent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ReceptionHall">
+  <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SelfEquippedProvider">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#EntertainmentProvider"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#providesEquipment"/>
+          <owl:someValuesFrom rdf:resource="#SoundEquipment"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#EntertainmentProvider"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SoundEquipment"/>
+
+<owl:Class rdf:about="#SmallWedding">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Wedding"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasSizeCategory"/>
+          <owl:someValuesFrom rdf:resource="#SmallSize"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Wedding"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VegetarianMenu">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Menu"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#containsDish"/>
+          <owl:allValuesFrom>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#hasIngredient"/>
+              <owl:allValuesFrom>
+                <owl:Class>
+                  <owl:complementOf rdf:resource="#MeatIngredient"/>
+                </owl:Class>
+              </owl:allValuesFrom>
+            </owl:Restriction>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Menu"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VerifiedWeddingPlan">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#CompleteWeddingPlan"/>
+        <owl:Class>
+          <owl:complementOf rdf:resource="#ConflictingWeddingPlan"/>
+        </owl:Class>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#WeddingPlan"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#classical">
+  <rdf:type rdf:resource="#MusicGenre"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#indieRock">
+  <rdf:type rdf:resource="#MusicGenre"/>
+  <subGenreOf rdf:resource="#rock"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#jazz">
+  <rdf:type rdf:resource="#MusicGenre"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#rock">
+  <rdf:type rdf:resource="#MusicGenre"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#smallSize">
+  <rdf:type rdf:resource="#SmallSize"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#mediumSize">
+  <rdf:type rdf:resource="#MediumSize"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#largeSize">
+  <rdf:type rdf:resource="#LargeSize"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#alcoholAllowedPolicy">
+  <rdf:type rdf:resource="#AlcoholAllowedPolicy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noAlcoholPolicy">
+  <rdf:type rdf:resource="#NoAlcoholPolicy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lateMusicAllowedPolicy">
+  <rdf:type rdf:resource="#LateNightMusicAllowedPolicy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noLateMusicPolicy">
+  <rdf:type rdf:resource="#NoLateNightMusicPolicy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#reqWheelchair">
+  <rdf:type rdf:resource="#WheelchairRequirement"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#reqAlcoholFree">
+  <rdf:type rdf:resource="#AlcoholFreeRequirement"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#reqVegetarian">
+  <rdf:type rdf:resource="#VegetarianRequirement"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#reqGlutenFree">
+  <rdf:type rdf:resource="#GlutenFreeRequirement"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tomato">
+  <rdf:type rdf:resource="#SafeIngredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#basil">
+  <rdf:type rdf:resource="#SafeIngredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#mozzarella">
+  <rdf:type rdf:resource="#SafeIngredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#rice">
+  <rdf:type rdf:resource="#SafeIngredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#chicken">
+  <rdf:type rdf:resource="#MeatIngredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#wheatFlour">
+  <rdf:type rdf:resource="#GlutenIngredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#almond">
+  <rdf:type rdf:resource="#NutIngredient"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#caprese">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasIngredient rdf:resource="#tomato"/>
+  <hasIngredient rdf:resource="#basil"/>
+  <hasIngredient rdf:resource="#mozzarella"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasIngredient"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#tomato"/>
+            <rdf:Description rdf:about="#basil"/>
+            <rdf:Description rdf:about="#mozzarella"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tomatoRisotto">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasIngredient rdf:resource="#rice"/>
+  <hasIngredient rdf:resource="#tomato"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasIngredient"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#rice"/>
+            <rdf:Description rdf:about="#tomato"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#chickenCurry">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasIngredient rdf:resource="#chicken"/>
+  <hasIngredient rdf:resource="#rice"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#breadBasket">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasIngredient rdf:resource="#wheatFlour"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#almondCake">
+  <rdf:type rdf:resource="#Dish"/>
+  <hasIngredient rdf:resource="#almond"/>
+  <hasIngredient rdf:resource="#wheatFlour"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#gardenMenu">
+  <rdf:type rdf:resource="#Menu"/>
+  <containsDish rdf:resource="#caprese"/>
+  <containsDish rdf:resource="#tomatoRisotto"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#containsDish"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#caprese"/>
+            <rdf:Description rdf:about="#tomatoRisotto"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#classicMenu">
+  <rdf:type rdf:resource="#Menu"/>
+  <containsDish rdf:resource="#chickenCurry"/>
+  <containsDish rdf:resource="#breadBasket"/>
+  <containsDish rdf:resource="#almondCake"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#gardenLawn">
+  <rdf:type rdf:resource="#OutdoorSpace"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#mainHall">
+  <rdf:type rdf:resource="#ReceptionHall"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#grandHallParking">
+  <rdf:type rdf:resource="#ParkingFacility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#grandHallKitchen">
+  <rdf:type rdf:resource="#OnSiteKitchen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#grandHallRamp">
+  <rdf:type rdf:resource="#WheelchairAccess"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#castleParking">
+  <rdf:type rdf:resource="#ParkingFacility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#beachClubParking">
+  <rdf:type rdf:resource="#ParkingFacility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#barnKitchen">
+  <rdf:type rdf:resource="#OnSiteKitchen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#grandHallVenue">
+  <rdf:type rdf:resource="#Venue"/>
+  <hasFacility rdf:resource="#grandHallParking"/>
+  <hasFacility rdf:resource="#grandHallKitchen"/>
+  <hasFacility rdf:resource="#grandHallRamp"/>
+  <hasPolicy rdf:resource="#alcoholAllowedPolicy"/>
+  <hasPolicy rdf:resource="#lateMusicAllowedPolicy"/>
+  <hasSpace rdf:resource="#gardenLawn"/>
+  <hasSpace rdf:resource="#mainHall"/>
+  <hasBackupSpace rdf:resource="#mainHall"/>
+  <hasCapacityCategory rdf:resource="#largeSize"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasPolicy"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#alcoholAllowedPolicy"/>
+            <rdf:Description rdf:about="#lateMusicAllowedPolicy"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#hilltopCastleVenue">
+  <rdf:type rdf:resource="#Venue"/>
+  <hasFacility rdf:resource="#castleParking"/>
+  <hasPolicy rdf:resource="#noLateMusicPolicy"/>
+  <hasPolicy rdf:resource="#noAlcoholPolicy"/>
+  <hasCapacityCategory rdf:resource="#mediumSize"/>
+  <rdf:type>
+    <owl:Class>
+      <owl:complementOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasFacility"/>
+          <owl:someValuesFrom rdf:resource="#WheelchairAccess"/>
+        </owl:Restriction>
+      </owl:complementOf>
+    </owl:Class>
+  </rdf:type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#beachClubVenue">
+  <rdf:type rdf:resource="#Venue"/>
+  <hasFacility rdf:resource="#beachClubParking"/>
+  <hasCapacityCategory rdf:resource="#mediumSize"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasFacility"/>
+      <owl:allValuesFrom rdf:resource="#ParkingFacility"/>
+    </owl:Restriction>
+  </rdf:type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cozyBarnVenue">
+  <rdf:type rdf:resource="#Venue"/>
+  <hasFacility rdf:resource="#barnKitchen"/>
+  <hasCapacityCategory rdf:resource="#smallSize"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#guard1">
+  <rdf:type rdf:resource="#SecurityStaff"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#guard2">
+  <rdf:type rdf:resource="#SecurityStaff"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#officiant1">
+  <rdf:type rdf:resource="#Officiant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#photographer1">
+  <rdf:type rdf:resource="#Photographer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#chefOnSiteCatering">
+  <rdf:type rdf:resource="#OnSiteCookingCatering"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deliveryCatering1">
+  <rdf:type rdf:resource="#DeliveryCatering"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#djMax">
+  <rdf:type rdf:resource="#DJ"/>
+  <providesEquipment rdf:resource="#djMaxSpeakers"/>
+  <playsGenre rdf:resource="#jazz"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#djMaxSpeakers">
+  <rdf:type rdf:resource="#SoundEquipment"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#theEchoBand">
+  <rdf:type rdf:resource="#LiveBand"/>
+  <playsGenre rdf:resource="#indieRock"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#coupleAnnaBen">
+  <rdf:type rdf:resource="#Couple"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasHardRequirement"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdf:type>
+  <prefersGenre rdf:resource="#jazz"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#coupleCarlaDan">
+  <rdf:type rdf:resource="#Couple"/>
+  <hasHardRequirement rdf:resource="#reqWheelchair"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#coupleEvaFaisal">
+  <rdf:type rdf:resource="#Couple"/>
+  <hasHardRequirement rdf:resource="#reqAlcoholFree"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#coupleGinaHugo">
+  <rdf:type rdf:resource="#Couple"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#coupleIrisJay">
+  <rdf:type rdf:resource="#Couple"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#coupleKimLeo">
+  <rdf:type rdf:resource="#Couple"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#coupleMiaNoah">
+  <rdf:type rdf:resource="#Couple"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#guestVera">
+  <rdf:type rdf:resource="#Guest"/>
+  <hasDietaryRequirement rdf:resource="#reqVegetarian"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#guestGlen">
+  <rdf:type rdf:resource="#Guest"/>
+  <hasDietaryRequirement rdf:resource="#reqGlutenFree"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ceremonyAnnaBen">
+  <rdf:type rdf:resource="#Ceremony"/>
+  <heldIn rdf:resource="#gardenLawn"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#receptionAnnaBen">
+  <rdf:type rdf:resource="#EveningReception"/>
+  <heldIn rdf:resource="#mainHall"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#receptionMiaNoah">
+  <rdf:type rdf:resource="#EveningReception"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weddingAnnaBen">
+  <rdf:type rdf:resource="#Wedding"/>
+  <hasSizeCategory rdf:resource="#largeSize"/>
+  <hasCouple rdf:resource="#coupleAnnaBen"/>
+  <hasGuest rdf:resource="#guestVera"/>
+  <hasSubEvent rdf:resource="#ceremonyAnnaBen"/>
+  <hasSubEvent rdf:resource="#receptionAnnaBen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weddingCarlaDan">
+  <rdf:type rdf:resource="#Wedding"/>
+  <hasSizeCategory rdf:resource="#smallSize"/>
+  <hasCouple rdf:resource="#coupleCarlaDan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weddingEvaFaisal">
+  <rdf:type rdf:resource="#Wedding"/>
+  <hasSizeCategory rdf:resource="#mediumSize"/>
+  <hasCouple rdf:resource="#coupleEvaFaisal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weddingGinaHugo">
+  <rdf:type rdf:resource="#Wedding"/>
+  <hasSizeCategory rdf:resource="#largeSize"/>
+  <hasCouple rdf:resource="#coupleGinaHugo"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weddingIrisJay">
+  <rdf:type rdf:resource="#Wedding"/>
+  <hasSizeCategory rdf:resource="#mediumSize"/>
+  <hasCouple rdf:resource="#coupleIrisJay"/>
+  <hasGuest rdf:resource="#guestGlen"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weddingKimLeo">
+  <rdf:type rdf:resource="#Wedding"/>
+  <hasSizeCategory rdf:resource="#smallSize"/>
+  <hasCouple rdf:resource="#coupleKimLeo"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weddingMiaNoah">
+  <rdf:type rdf:resource="#Wedding"/>
+  <hasSizeCategory rdf:resource="#mediumSize"/>
+  <hasCouple rdf:resource="#coupleMiaNoah"/>
+  <hasSubEvent rdf:resource="#receptionMiaNoah"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#planAnnaBen">
+  <rdf:type rdf:resource="#WeddingPlan"/>
+  <hasWedding rdf:resource="#weddingAnnaBen"/>
+  <selectedVenue rdf:resource="#grandHallVenue"/>
+  <selectedCaterer rdf:resource="#chefOnSiteCatering"/>
+  <selectedMenu rdf:resource="#gardenMenu"/>
+  <assignedService rdf:resource="#guard1"/>
+  <assignedService rdf:resource="#guard2"/>
+  <assignedService rdf:resource="#officiant1"/>
+  <assignedService rdf:resource="#photographer1"/>
+  <assignedService rdf:resource="#djMax"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#planCarlaDan">
+  <rdf:type rdf:resource="#WeddingPlan"/>
+  <hasWedding rdf:resource="#weddingCarlaDan"/>
+  <selectedVenue rdf:resource="#hilltopCastleVenue"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#planEvaFaisal">
+  <rdf:type rdf:resource="#WeddingPlan"/>
+  <hasWedding rdf:resource="#weddingEvaFaisal"/>
+  <selectedVenue rdf:resource="#grandHallVenue"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#planGinaHugo">
+  <rdf:type rdf:resource="#WeddingPlan"/>
+  <hasWedding rdf:resource="#weddingGinaHugo"/>
+  <selectedVenue rdf:resource="#cozyBarnVenue"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#planIrisJay">
+  <rdf:type rdf:resource="#WeddingPlan"/>
+  <hasWedding rdf:resource="#weddingIrisJay"/>
+  <selectedVenue rdf:resource="#grandHallVenue"/>
+  <selectedMenu rdf:resource="#classicMenu"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#planKimLeo">
+  <rdf:type rdf:resource="#WeddingPlan"/>
+  <hasWedding rdf:resource="#weddingKimLeo"/>
+  <selectedVenue rdf:resource="#beachClubVenue"/>
+  <selectedCaterer rdf:resource="#chefOnSiteCatering"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#planMiaNoah">
+  <rdf:type rdf:resource="#WeddingPlan"/>
+  <hasWedding rdf:resource="#weddingMiaNoah"/>
+  <selectedVenue rdf:resource="#hilltopCastleVenue"/>
+  <assignedService rdf:resource="#theEchoBand"/>
+</owl:NamedIndividual>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#guard1"/>
+    <rdf:Description rdf:about="#guard2"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#OnSiteKitchen"/>
+    <rdf:Description rdf:about="#ParkingFacility"/>
+    <rdf:Description rdf:about="#WheelchairAccess"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LargeSize"/>
+    <rdf:Description rdf:about="#MediumSize"/>
+    <rdf:Description rdf:about="#SmallSize"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#GlutenFreeRequirement"/>
+    <rdf:Description rdf:about="#NutFreeRequirement"/>
+    <rdf:Description rdf:about="#VegetarianRequirement"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Couple"/>
+    <rdf:Description rdf:about="#Dish"/>
+    <rdf:Description rdf:about="#Facility"/>
+    <rdf:Description rdf:about="#Guest"/>
+    <rdf:Description rdf:about="#Ingredient"/>
+    <rdf:Description rdf:about="#Menu"/>
+    <rdf:Description rdf:about="#MusicGenre"/>
+    <rdf:Description rdf:about="#Requirement"/>
+    <rdf:Description rdf:about="#Service"/>
+    <rdf:Description rdf:about="#SizeCategory"/>
+    <rdf:Description rdf:about="#SoundEquipment"/>
+    <rdf:Description rdf:about="#Space"/>
+    <rdf:Description rdf:about="#Venue"/>
+    <rdf:Description rdf:about="#VenuePolicy"/>
+    <rdf:Description rdf:about="#Wedding"/>
+    <rdf:Description rdf:about="#WeddingPlan"/>
+    <rdf:Description rdf:about="#WeddingSubEvent"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#CateringService"/>
+    <rdf:Description rdf:about="#EntertainmentProvider"/>
+    <rdf:Description rdf:about="#Officiant"/>
+    <rdf:Description rdf:about="#Photographer"/>
+    <rdf:Description rdf:about="#SecurityStaff"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#AlcoholFreeRequirement"/>
+    <rdf:Description rdf:about="#AlcoholRequiredRequirement"/>
+    <rdf:Description rdf:about="#WheelchairRequirement"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
-
